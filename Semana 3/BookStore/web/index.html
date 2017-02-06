@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="static/bookstore.css"/>
+    </head>
+    <body>
+        <h1>Agregar nuevo libro</h1>
+        <form action="CrearLibro">
+            <article>
+                <header>
+                    <h2>Información general</h2>
+                </header>
+                <p>
+                    <label>Nombre: </label>
+                    <input type="text" name="nombre"/>
+                    <br/>
+                    <br/>
+                    <label>Precio: </label>
+                    <input type="text" name="precio"/>
+                    <br/>
+                    <br/>
+                    <label>ISBN: </label>
+                    <input type="text" name="isbn" />
+                    <br/>
+                    <br/>
+                    <label>Fecha de <br/> Publicacion: </label>
+                    <input type="text" name="fecha"/>
+                </p>
+                <header>
+                    <h2>Información del género</h2>
+                </header>
+                <p>
+                    <label>Género: </label>
+                    <select name="genero">
+                        <option>Ciencia</option>
+                        <option>Programacion</option>
+                        <option>Matematicas</option>
+                    </select>
+                </p>
+                <header>
+                    <h2>Información de publicación</h2> 
+                </header>
+                <p>
+                    <label>Editorial: </label>
+                    <input type="text" name="editorial" />
+                    <br/>
+                    <br/>
+                    <label>Autor: </label>
+                    <input type="text" name="autor"/>
+                </p>
+            </article>
+            <input type="submit" value="Guardar" class="btn" />
+        </form>
+    </body>
+</html>
