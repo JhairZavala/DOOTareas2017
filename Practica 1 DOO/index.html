@@ -1,0 +1,50 @@
+<html>
+	<header>
+	</header>
+	<body>
+		<label> Nombre: </label>
+		<input type= "text" id= "nombre"/>
+		</br>
+		</br>
+		<label> Apellido Paterno: </label>
+		<input type= "text" id= "paterno"/>
+		</br>
+		</br>
+		<label> Apellido Materno: </label>
+		<input type= "text" id= "materno"/>
+		</br>
+		</br>
+		<label> Fecha de Nacimiento: </label>
+		<input type= "text" id= "fecha"/>
+		</br>
+		</br>
+		<label>Genero:</label>
+		<select id="combobox" >
+			<option value="HOMBRE">Hombre</option>
+			<option value="MUJER">Mujer</option>
+		</select>
+		</br>
+		</br>
+		<input type="button" value="Imprimir" onclick="imprimir()"/>
+		<div class="impresion">
+      			<label id="lbl-rfc"></label>
+    		</div>
+	</body>
+	<script>
+		function imprimir(){
+			var rfc = ""
+			var str = document.getElementById("paterno").value;
+				rfc = rfc + str.substring(0,2);
+				str = document.getElementById("materno").value;
+				rfc = rfc + str.substring(0,1);
+				str = document.getElementById("nombre").value;
+				rfc = rfc + str.substring(0,1);
+				str = document.getElementById("fecha").value;
+				rfc = rfc + str.substring(0,8);
+				str = document.getElementById("combobox").value;
+				rfc = rfc + str.substring(0,1);
+				var nom = rfc;
+				document.getElementById("lbl-rfc").innerHTML = rfc;
+		}
+	</script>
+</html>
